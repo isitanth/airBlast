@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Demande le mot de passe sudo une seule fois au début du script
+# Request sudo password once at the beginning of the script
 sudo -v
 
-# Maintien l'autorisation sudo active pendant l'exécution du script
+# Maintains sudo authorization during script execution
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Liste des processus à tuer
+# List of processes to kill - nothing harmfull, be carrefull if you listen music through bluetooth device, audio will be out from speaker the time it reconnects
 processes=(
     "ControlCenter"
     "UniversalControl"
