@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Request sudo password once at the beginning of the script
+# Request sudo password once
 sudo -v
 
 # Maintains sudo authorization during script execution
@@ -33,15 +33,15 @@ processes=(
     "wifianalyticsd"
 )
 
-# Parcours la liste et tue les processus
+# Go through the list and kill the processes
 for process in "${processes[@]}"; do
     PID=$(pgrep "$process")
     if [[ -n "$PID" ]]; then
         echo "Tuer $process (PID: $PID)..."
-        sudo kill -9 $PID 2>/dev/null && echo "$process tué." || echo "Échec de l'arrêt de $process."
+        sudo kill -9 $PID 2>/dev/null && echo "$process kill." || echo "Failure to stop $process."
     else
         echo "$process n'est pas en cours d'exécution."
     fi
 done
 
-echo "✅ Tous les processus ont été traités."
+echo "All processes have been killed."
