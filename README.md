@@ -1,7 +1,7 @@
 # airBlast
-	•	Forcefully kills and relaunches key macOS daemons and user-space processes involved in:
+	•   Kills and relaunches key macOS daemons and user-space processes involved in:
 	•	AirDrop state propagation
-	•	Network interface refresh
+	•	Network interface refresh(es)
 	•	Control Center updates
 	•	Finder view consistency
 	•	Rebuilds the Control Center (CC) stack to fix badge desyncs (e.g., AirDrop not showing “Receiving” properly).
