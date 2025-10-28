@@ -1,4 +1,5 @@
 # airBlast
+This is an extremely simple dummy script that allows you to :
 	•   Kills and relaunches key macOS daemons and user-space processes involved in:
 	•	AirDrop state propagation
 	•	Network interface refresh(es)
